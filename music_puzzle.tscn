@@ -34,7 +34,7 @@ text = "New"
 [node name="ValidationIndicator" type="ColorRect" parent="OuterContainer/MenuContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-color = Color(0.564706, 0.65098, 1, 1)
+color = Color(0.431373, 0.686275, 1, 1)
 
 [node name="QuitButton" type="Button" parent="OuterContainer/MenuContainer"]
 unique_name_in_owner = true
