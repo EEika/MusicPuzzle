@@ -1,0 +1,192 @@
+[gd_scene load_steps=2 format=3 uid="uid://d5j6rgdsue17"]
+
+[ext_resource type="Script" path="res://music_puzzle.gd" id="1_8h5rw"]
+
+[node name="MusicPuzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8h5rw")
+
+[node name="OuterContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical = true
+
+[node name="MenuContainer" type="BoxContainer" parent="OuterContainer"]
+layout_direction = 2
+layout_mode = 2
+alignment = 1
+
+[node name="NewButton" type="Button" parent="OuterContainer/MenuContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "New"
+
+[node name="ValidationIndicator" type="ColorRect" parent="OuterContainer/MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.564706, 0.65098, 1, 1)
+
+[node name="QuitButton" type="Button" parent="OuterContainer/MenuContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quit	"
+
+[node name="ButtonContainer" type="BoxContainer" parent="OuterContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Button1" type="Button" parent="OuterContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+
+[node name="Button2" type="Button" parent="OuterContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "2"
+
+[node name="Button3" type="Button" parent="OuterContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "3"
+
+[node name="Button4" type="Button" parent="OuterContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "4"
+
+[node name="Button5" type="Button" parent="OuterContainer/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "5"
+
+[node name="AttemtPannel" type="PanelContainer" parent="OuterContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="OuterContainer/AttemtPannel"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Attempt:"
+
+[node name="AttemptContainer" type="BoxContainer" parent="OuterContainer/AttemtPannel"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Label1" type="Label" parent="OuterContainer/AttemtPannel/AttemptContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="OuterContainer/AttemtPannel/AttemptContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="OuterContainer/AttemtPannel/AttemptContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="OuterContainer/AttemtPannel/AttemptContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="OuterContainer/AttemtPannel/AttemptContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SolutionPannel" type="PanelContainer" parent="OuterContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="OuterContainer/SolutionPannel"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Solution:"
+
+[node name="SolutionContainer" type="BoxContainer" parent="OuterContainer/SolutionPannel"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="Label1" type="Label" parent="OuterContainer/SolutionPannel/SolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="OuterContainer/SolutionPannel/SolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="OuterContainer/SolutionPannel/SolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="OuterContainer/SolutionPannel/SolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="OuterContainer/SolutionPannel/SolutionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="OuterContainer/MenuContainer/NewButton" to="." method="_on_new_button_pressed"]
+[connection signal="pressed" from="OuterContainer/MenuContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="OuterContainer/ButtonContainer/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="OuterContainer/ButtonContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="OuterContainer/ButtonContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="OuterContainer/ButtonContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="OuterContainer/ButtonContainer/Button5" to="." method="_on_button_5_pressed"]
